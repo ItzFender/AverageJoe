@@ -48,8 +48,8 @@ public class CharacterControllerScript : MonoBehaviour {
 	}
 
 	void Update(){
-		grounded = Input.GetKey ("left shift");
-		anim.SetBool ("Crouch", grounded);
+		chrouched = Input.GetKey ("left shift");
+		anim.SetBool ("Crouch", chrouched);
 
 		if ((grounded || !doubleJump) && Input.GetKeyDown ("space")) {
 			anim.SetBool("Ground", false);
