@@ -17,6 +17,8 @@ public class CharacterControllerScript : MonoBehaviour {
 
 	bool doubleJump = false;
 
+	bool chrouched = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -46,6 +48,9 @@ public class CharacterControllerScript : MonoBehaviour {
 	}
 
 	void Update(){
+		grounded = Input.GetKey ("left shift");
+		anim.SetBool ("Crouch", grounded);
+
 		if ((grounded || !doubleJump) && Input.GetKeyDown ("space")) {
 			anim.SetBool("Ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
