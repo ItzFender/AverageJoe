@@ -13,6 +13,13 @@ public class CharacterControllerScript : MonoBehaviour {
 	public Transform groundCheck;
 	float groundRadious = 0.2f;
 	public LayerMask whatIsGround;
+
+	//wall jumping
+	bool onWall = false;
+	public Transform wallCheck;
+	float wallRadious = 0.35f;
+	public LayerMask whatIsWall;
+
 	public float jumpForce = 700f;
 
 	bool doubleJump = false;
@@ -33,6 +40,10 @@ public class CharacterControllerScript : MonoBehaviour {
 		if (grounded)
 						doubleJump = false;
 
+		onWall = Physics2D.OverlapCircle (wallCheck.position, wallRadious, whatIsWall);
+		anim.SetBool ("Wall", onWall);
+
+
 		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 
 		float move = Input.GetAxis ("Horizontal");
@@ -51,12 +62,12 @@ public class CharacterControllerScript : MonoBehaviour {
 		chrouched = Input.GetKey ("left shift");
 		anim.SetBool ("Crouch", chrouched);
 
-		if ((grounded || !doubleJump) && Input.GetKeyDown ("space")) {
+		if ((grounded || onWall) && Input.GetKeyDown ("space")) {
 			anim.SetBool("Ground", false);
 			rigidbody2D.AddForce(new Vector2(0, jumpForce));
 
-			if(!doubleJump && !grounded)
-				doubleJump = true;
+			//if(!doubleJump && !grounded)
+				//doubleJump = true;
 
 		}
 

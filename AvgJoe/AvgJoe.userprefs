@@ -1,9 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FollowPath.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterControllerScript.cs">
     <Files>
-      <File FileName="Assets\PathDefinition.cs" Line="20" Column="14" />
-      <File FileName="Assets\FollowPath.cs" Line="46" Column="33" />
+      <File FileName="Assets\Sample Assets\2D\Scripts\Tiling.cs" Line="32" Column="12" />
+      <File FileName="Assets\Sample Assets\2D\Scripts\Camera2DFollow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\FollowPath.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CharacterControllerScript.cs" Line="21" Column="18" />
+      <File FileName="Assets\Sample Assets\2D\Scripts\Platformer2DUserControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Sample Assets\2D\Scripts\PlatformerCharacter2D.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Parallaxing.cs" Line="32" Column="12" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
