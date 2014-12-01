@@ -29,9 +29,6 @@ public class CharacterControllerScript : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadious, whatIsGround);
 		anim.SetBool ("Ground", grounded);
 
-		if (grounded) {
-			doubleJump = false;
-		}
 
 		anim.SetFloat("vSpeed", rigidbody2D.velocity.y);
 
